@@ -14,7 +14,7 @@ htmlfile = requests.get(url)
 data = json.loads(htmlfile.text)
 print(data["records"]["locations"][0]["location"][0]["locationName"],"天氣預報")
 print(" "*26,"氣溫 降雨機率")
-for n in range(24):
+for n in range(22):
     startTime = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][n]["startTime"][5:16]
     endTime = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][n]["endTime"][5:16]
     value = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][n]["elementValue"][0]["value"]
